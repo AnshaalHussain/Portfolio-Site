@@ -13,10 +13,11 @@ const Home = () => {
           I'm a Full Stack <br /> Developer.
         </h2>
         <p className="text-[#8892b0] py-4 max-w-[700px]">
-          I come from a psychology background and transitioned into web
-          development by attending Lighthouse Labs (a.k.a. the hardest, most
-          rewarding 12 weeks of my life!). I'm passionate about the field of
-          software development and design.
+          I transitioned into web development from a psychology background by
+          attending Lighthouse Labs (a.k.a. the hardest, most rewarding 12 weeks
+          of my life!). I'm passionate about the field of software development
+          and design, and currently I'm focused on building full stack
+          responsive web applications.
         </p>
 
         <div>
