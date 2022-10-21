@@ -5,6 +5,21 @@ import YoLowTrips from "../assets/YoLowTrips.png";
 import InterviewScheduler from "../assets/InterviewScheduler.png";
 
 const Work = () => {
+  const ProjectsData = [
+    {
+      img: YoLowTrips,
+      name: "Flight Deals Tracker",
+      demoLink: "https://github.com/AnshaalHussain/Yo-Low-Trips",
+      codeLink: "#",
+    },
+    {
+      img: InterviewScheduler,
+      name: "Interview Scheduler",
+      demoLink: "https://github.com/AnshaalHussain/Interview-Scheduler",
+      codeLink: "#",
+    },
+  ];
+
   return (
     <div name="work" className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
@@ -25,50 +40,54 @@ const Work = () => {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
             {/* Card grid item */}
 
-            <div>
-              <div
-                style={{ backgroundImage: `url(${YoLowTrips})` }}
-                className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-              >
-                {/* Hover styling */}
-                <div className="opacity-0 group-hover:opacity-100">
-                  <span className="text-2xl font-bold text-white tracking-wider">
-                    Flight Deals Tracker
-                  </span>
-                  <div className="pt-8 text-center">
-                    <a href="/">
-                      <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                        Demo
-                      </button>
-                    </a>
-                    <a
-                      href="https://github.com/AnshaalHussain/Yo-Low-Trips"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
-                        Code
-                      </button>
-                    </a>
+            {ProjectsData.map((project) => {
+              return (
+                <div>
+                  <div
+                    style={{ backgroundImage: `url(${project.img})` }}
+                    className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
+                  >
+                    {/* Hover styling */}
+                    <div className="opacity-0 group-hover:opacity-100">
+                      <span className="text-2xl font-bold text-white tracking-wider">
+                        {project.name}
+                      </span>
+                      <div className="pt-8 text-center">
+                        <a href="/">
+                          <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                            Demo
+                          </button>
+                        </a>
+                        <a
+                          href={`${project.codeLink}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <button className="text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg">
+                            Code
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Description */}
+                  <div className="py-2 text-sm text-left">
+                    Search for cheapest deals on flights, as well as filter for
+                    destination, price, departure date. Plans to add additional
+                    features!
                   </div>
                 </div>
-              </div>
-              {/* Description */}
-              <div className="py-2 text-sm text-left">
-                Search for cheapest deals on flights, as well as filter for
-                destination, price, departure date. Plans to add additional
-                features!
-              </div>
-            </div>
+              );
+            })}
 
             {/* Card grid item */}
-            <div>
+            {/* <div>
               <div
                 style={{ backgroundImage: `url(${InterviewScheduler})` }}
                 className="shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div"
-              >
-                {/* Hover styling */}
-                <div className="opacity-0 group-hover:opacity-100">
+              > */}
+            {/* Hover styling */}
+            {/* <div className="opacity-0 group-hover:opacity-100">
                   <span className="text-2xl font-bold text-white tracking-wider">
                     Interview Scheduler
                   </span>
@@ -89,16 +108,16 @@ const Work = () => {
                     </a>
                   </div>
                 </div>
-              </div>
-              {/* Description */}
-              <div className="py-2 text-sm text-left">
+              </div> */}
+            {/* Description */}
+            {/* <div className="py-2 text-sm text-left">
                 One of my proudest projects coming out of Lighthouse Labs! It
                 was while building this application that I grasped React
                 concepts I was learning such as state management with the
                 useState hook, passing props, data fetching with axios and
                 useEffect ...and much more.
               </div>
-            </div>
+            </div> */}
           </div>
         </AnimationOnScroll>
       </div>
